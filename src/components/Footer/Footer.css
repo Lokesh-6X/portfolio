@@ -1,0 +1,180 @@
+.footer{
+
+  position: relative;
+
+  z-index: 3;
+
+  padding: 80px 8% 40px;
+
+  margin-top: 80px;
+
+  overflow: hidden;
+}
+
+/* Neon Top Border */
+
+.footer-line{
+
+  width: 100%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(0,245,255,0.8),
+      transparent
+    );
+
+  margin-bottom: 60px;
+}
+
+/* Main Content */
+
+.footer-content{
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+/* Logo */
+
+.footer-logo{
+
+  font-family: 'Orbitron', sans-serif;
+
+  font-size: 2.5rem;
+
+  font-weight: 700;
+
+  letter-spacing: 5px;
+
+  color: #E6F1FF;
+
+  margin-bottom: 18px;
+}
+
+/* Tagline */
+
+.footer-tagline{
+
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: 1rem;
+
+  color: rgba(230,241,255,0.7);
+
+  margin-bottom: 35px;
+}
+
+/* Social Icons */
+
+.footer-socials{
+
+  display: flex;
+
+  gap: 22px;
+
+  margin-bottom: 40px;
+}
+
+/* Social Links */
+
+.footer-socials a{
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  text-decoration: none;
+
+  font-size: 1.2rem;
+
+  color: #E6F1FF;
+
+  background: rgba(255,255,255,0.03);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(10px);
+
+  transition: 0.3s ease;
+}
+
+/* Hover */
+
+.footer-socials a:hover{
+
+  transform: translateY(-5px);
+
+  color: #00F5FF;
+
+  border-color: rgba(0,245,255,0.4);
+
+  background: rgba(0,245,255,0.08);
+}
+
+/* Terminal Line */
+
+.footer-terminal{
+
+  font-family: 'Fira Code', monospace;
+
+  font-size: 0.95rem;
+
+  color: #00F5FF;
+
+  margin-bottom: 18px;
+}
+
+/* Copyright */
+
+.footer-copy{
+
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: 0.9rem;
+
+  color: rgba(230,241,255,0.45);
+}
+
+/* Responsive */
+
+@media (max-width: 768px){
+
+  .footer{
+
+    padding: 70px 6% 35px;
+  }
+
+  .footer-logo{
+
+    font-size: 1.8rem;
+
+    letter-spacing: 3px;
+  }
+
+  .footer-socials{
+
+    gap: 16px;
+  }
+
+  .footer-socials a{
+
+    width: 45px;
+    height: 45px;
+
+    font-size: 1rem;
+  }
+
+}

@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Skills from "./components/Skills/Skills";
 import ParticlesBackground from "./components/ParticlesBackground/ParticlesBackground";
-
+import Footer from "./components/Footer/Footer";
 import "./App.css";
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
       <Navbar />
       <Hero />
       <Skills />
+      <Footer />
     </ div>
   );
 }
