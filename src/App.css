@@ -1,13 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap');
-
-*{
+html,
+body,
+#root{
   margin:0;
   padding:0;
-  box-sizing:border-box;
+
+  width:100%;
+  min-height:100%;
+
+  background:#050816;
+
+  overflow-x:hidden;
 }
 
-body{
-  background:#0F172A;
-  font-family:'Outfit', sans-serif;
+/* MAIN APP */
+
+.app{
+
+  position:relative;
+
+  min-height:100vh;
+
+  background:#050816;
+
+  overflow:hidden;
+}
+
+/* CYBER GRID */
+
+.app::before{
+
+  content:"";
+
+  position:fixed;
+
+  inset:0;
+
+  background-image:
+
+    linear-gradient(
+      rgba(0,245,255,0.15) 2px,
+      transparent 2px
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(0,245,255,0.15) 2px,
+      transparent 2px
+    );
+
+  background-size:80px 80px;
+
+  transform:
+    perspective(1000px)
+    rotateX(75deg)
+    translateY(0);
+
+  transform-origin:center;
+
+  animation:gridMove 10s linear infinite;
+
+  z-index:1;
+
+  pointer-events:none;
+
+  opacity:1;
+}
+
+/* PURPLE + CYAN LIGHTS */
+
+.app::after{
+
+  content:"";
+
+  position:fixed;
+
+  inset:0;
+
+  background:
+
+    radial-gradient(
+      circle at top left,
+      rgba(123,47,247,0.18),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at bottom right,
+      rgba(0,245,255,0.12),
+      transparent 30%
+    );
+
+  z-index:0;
+
+  pointer-events:none;
+}
+
+/* GRID MOVEMENT */
+
+@keyframes gridMove{
+
+  0%{
+    transform:
+      perspective(1000px)
+      rotateX(75deg)
+      translateY(0);
+  }
+
+  100%{
+    transform:
+      perspective(1000px)
+      rotateX(75deg)
+      translateY(80px);
+  }
+
 }

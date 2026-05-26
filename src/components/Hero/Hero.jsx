@@ -14,48 +14,47 @@ const Hero = () => {
 
       <div className="hero-content">
 
-      {/* Typing Greeting */}
+        {/* Hero Name */}
 
-      <h3 className="hero-greeting">
-        <ReactTyped
-          strings={[
-            "Hi, I am Lokesh Kumar S..."
-          ]}
-          typeSpeed={70}
-          backSpeed={40}
-          loop
-        />
-      </h3>
+        <h1 
+          className="hero-name"
+          data-text="LOKESH KUMAR S">
+          LOKESH KUMAR S
+        </h1>
 
-      {/* Role */}
+        {/* Typing Greeting */}
 
-      <h1 className="hero-role">
-        Full Stack Developer
-      </h1>
+        <h3 className="hero-greeting">
+          <ReactTyped
+            strings={[
+              "Hi, I am a Full Stack Developer..."
+            ]}
+            typeSpeed={70}
+            backSpeed={40}
+            loop
+          />
+        </h3>
 
-      {/* Description */}
+        {/* Description */}
 
-      <p className="hero-description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Doloremque aspernatur voluptas ratione exercitationem
-        numquam pariatur dicta unde dignissimos deleniti.
-        Perspiciatis officiis magni quas minima repellendus
-        architecto sapiente molestiae assumenda eveniet.
-      </p>
+        <p className="hero-description">
+          Passionate about building scalable web applications and creating modern digital experiences using MERN Stack, Java, and Python. Focused on backend development, problem-solving, and continuous learning while exploring innovative technologies and developing efficient, user-centric solutions for real-world applications.
+        </p>
 
-      {/* Buttons */}
+        {/* Buttons */}
 
-      <div className="hero-buttons">
+        <div className="hero-buttons">
 
-        <a href="/" className="primary-btn">
-          View Resume
-        </a>
+          <a href="/" className="primary-btn">
+            View Resume
+          </a>
 
-        <a href="#contact" className="secondary-btn">
-          Contact Me
-        </a>
+          <a href="#contact" className="secondary-btn">
+            Contact Me
+          </a>
 
-      </div>
+        </div>
+
       </div>
 
       {/* Right Visual */}
