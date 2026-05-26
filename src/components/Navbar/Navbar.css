@@ -8,6 +8,8 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Navbar */
+
 .navbar {
   width: 100%;
   height: 80px;
@@ -24,48 +26,130 @@ html {
 
   z-index: 1000;
 
-  transition: 0.3s ease;
+  transition: 
+    background 0.3s ease,
+    backdrop-filter 0.3s ease,
+    border 0.3s ease;
 
   background: transparent;
+
+  overflow: hidden;
 }
 
+/* Cyberpunk Glass Effect */
+
 .navbar.scrolled {
-  background: rgba(15, 23, 42, 0.7);
 
-  backdrop-filter: blur(12px);
+  background: rgba(5, 8, 22, 0.65);
 
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(0, 245, 255, 0.12);
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.25);
+
+}
+
+/* Noise Texture */
+
+.navbar::before {
+
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+
+  opacity: 0.03;
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+/* Neon Bottom Glow */
+
+.navbar::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(0, 245, 255, 0.9),
+      transparent
+    );
+
+  opacity: 0;
+
+  transition: 0.3s ease;
+}
+
+.navbar.scrolled::after {
+  opacity: 1;
 }
 
 /* Logo */
 
 .logo img {
   height: 55px;
+
   object-fit: contain;
+
   cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
 }
 
 /* Desktop Nav */
 
 .nav-links {
   display: flex;
+
   gap: 40px;
+
   list-style: none;
 }
 
+/* Nav Links */
+
 .nav-links li a {
+
   text-decoration: none;
-  color: #FFF2DB;
+
+  color: #E6F1FF;
 
   font-size: 16px;
   font-weight: 500;
+
+  font-family: 'Outfit', sans-serif;
 
   position: relative;
 
   transition: 0.3s ease;
 }
 
+/* Underline Effect */
+
 .nav-links li a::after {
+
   content: "";
 
   position: absolute;
@@ -76,7 +160,10 @@ html {
   width: 0%;
   height: 2px;
 
-  background: #FFAB5B;
+  background: #00F5FF;
+
+  box-shadow:
+    0 0 10px rgba(0, 245, 255, 0.8);
 
   transition: 0.3s ease;
 }
@@ -85,26 +172,45 @@ html {
   width: 100%;
 }
 
+/* Hover Effect */
+
 .nav-links li a:hover {
-  color: #FFAB5B;
+
+  color: #00F5FF;
+
+  text-shadow:
+    0 0 10px rgba(0, 245, 255, 0.8);
 }
 
 /* Menu Icon */
 
 .menu-icon {
+
   display: none;
 
   font-size: 28px;
-  color: #FFF2DB;
+
+  color: #E6F1FF;
 
   cursor: pointer;
 
   z-index: 1200;
+
+  transition: 0.3s ease;
+}
+
+.menu-icon:hover {
+
+  color: #00F5FF;
+
+  text-shadow:
+    0 0 10px rgba(0, 245, 255, 0.8);
 }
 
 /* Mobile Menu */
 
 .mobile-menu {
+
   position: fixed;
 
   top: 0;
@@ -113,9 +219,13 @@ html {
   width: 70%;
   height: 100vh;
 
-  background: rgba(15, 23, 42, 0.95);
+  background: rgba(5, 8, 22, 0.92);
 
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+
+  border-right:
+    1px solid rgba(0, 245, 255, 0.12);
 
   display: flex;
   flex-direction: column;
@@ -134,19 +244,28 @@ html {
   left: 0;
 }
 
+/* Mobile Links */
+
 .mobile-menu a {
+
   text-decoration: none;
 
-  color: #FFF2DB;
+  color: #E6F1FF;
 
   font-size: 20px;
   font-weight: 500;
+
+  font-family: 'Outfit', sans-serif;
 
   transition: 0.3s ease;
 }
 
 .mobile-menu a:hover {
-  color: #FFAB5B;
+
+  color: #00F5FF;
+
+  text-shadow:
+    0 0 10px rgba(0, 245, 255, 0.8);
 }
 
 /* Responsive */
@@ -154,6 +273,7 @@ html {
 @media (max-width: 768px) {
 
   .navbar {
+
     height: 70px;
 
     padding: 0 20px;
@@ -162,14 +282,16 @@ html {
   }
 
   .menu-icon {
+
     display: block;
 
     position: absolute;
+
     left: 20px;
   }
 
   .logo img {
-    height: 40px;
+    height: 42px;
   }
 
   .nav-links {

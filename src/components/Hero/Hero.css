@@ -1,4 +1,6 @@
-.hero {
+.hero{
+  position: relative;
+
   min-height: 100vh;
 
   display: flex;
@@ -7,141 +9,242 @@
 
   padding: 120px 8% 60px;
 
-  background: #0F172A;
-
-  color: #FFF2DB;
-
   overflow: hidden;
+
+  background:
+    radial-gradient(circle at top left, rgba(123,47,247,0.15), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(0,245,255,0.15), transparent 30%),
+    #050816;
+
+  color: #E6F1FF;
+}
+
+/* Animated Cyberpunk Grid */
+
+.hero::before{
+  content: "";
+
+  position: absolute;
+
+  width: 200%;
+  height: 200%;
+
+  top: -50%;
+  left: -50%;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+
+  background-size: 60px 60px;
+
+  transform:
+    perspective(1000px)
+    rotateX(75deg);
+
+  animation: gridMove 18s linear infinite;
+
+  z-index: 0;
+}
+
+/* Grid Animation */
+
+@keyframes gridMove{
+
+  0%{
+    transform:
+      perspective(1000px)
+      rotateX(75deg)
+      translateY(0);
+  }
+
+  100%{
+    transform:
+      perspective(1000px)
+      rotateX(75deg)
+      translateY(60px);
+  }
+
+}
+
+/* Particles */
+
+#tsparticles{
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+
+  z-index: 1;
+}
+
+/* Hero Content Layer */
+
+.hero-content,
+.hero-image{
+  position: relative;
+  z-index: 2;
 }
 
 /* Left Content */
 
-.hero-content {
+.hero-content{
   flex: 1;
+
   max-width: 650px;
 }
 
 /* Greeting */
 
 .hero-greeting{
-  font-family:'Fira Code', monospace;
 
-  font-size:1.1rem;
+  font-family: 'Fira Code', monospace;
 
-  font-weight:400;
+  font-size: 1.1rem;
 
-  color:#FFAB5B;
+  font-weight: 400;
 
-  margin-bottom:16px;
+  color: #FFE600;
 
-  letter-spacing:0.5px;
+  margin-bottom: 16px;
+
+  letter-spacing: 0.5px;
 }
+
+/* Typing Cursor */
+
 .typed-cursor{
-  font-size:1.1rem;
 
-  color:#FFAB5B;
+  font-size: 1.1rem;
 
-  font-weight:300;
+  color: #FFE600;
+
+  font-weight: 300;
 }
 
 /* Name */
 
-.hero-name {
+.hero-name{
+
+  font-family: 'Sora', sans-serif;
+
   font-size: 4.5rem;
+
   font-weight: 700;
 
   line-height: 1.1;
 
   margin-bottom: 20px;
+
+  color: #E6F1FF;
 }
 
 /* Role */
 
 .hero-role{
-  font-family:'Outfit', sans-serif;
 
-  font-size:1.1rem;
+  font-family: 'Outfit', sans-serif;
 
-  font-weight:700;
+  font-size: 1.1rem;
 
-  color:#FFAB5B;
+  font-weight: 700;
 
-  margin-bottom:20px;
+  color: #FF4D4D;
 
-  text-transform:uppercase;
+  margin-bottom: 20px;
 
-  letter-spacing:1px;
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
 }
 
 /* Description */
 
 .hero-description{
-  font-size:1.05rem;
-  line-height:1.9;
 
-  color:rgba(255,242,219,0.75);
+  font-family: 'Outfit', sans-serif;
 
-  max-width:600px;
+  font-size: 1.05rem;
 
-  margin-bottom:40px;
+  line-height: 1.9;
+
+  color: rgba(230,241,255,0.72);
+
+  max-width: 600px;
+
+  margin-bottom: 40px;
 }
 
 /* Buttons */
 
-.hero-buttons {
+.hero-buttons{
+
   display: flex;
+
   gap: 20px;
 }
 
 /* Primary Button */
 
 .primary-btn{
-  padding:15px 34px;
 
-  background:#FFAB5B;
+  padding: 15px 34px;
 
-  color:#0F172A;
+  background: #00F5FF;
 
-  text-decoration:none;
+  color: #050816;
 
-  border-radius:14px;
+  border-radius: 14px;
 
-  font-weight:600;
+  text-decoration: none;
 
-  transition:0.3s ease;
+  font-weight: 600;
 
-  box-shadow:0 10px 30px rgba(255,171,91,0.25);
+  font-family: 'Outfit', sans-serif;
+
+  transition: 0.3s ease;
 }
 
-.primary-btn:hover {
+.primary-btn:hover{
+
   transform: translateY(-4px);
+
+  background: #00D9E0;
 }
 
 /* Secondary Button */
 
 .secondary-btn{
-  padding:15px 34px;
 
-  border:2px solid #00879E;
+  padding: 15px 34px;
 
-  color:#FFF2DB;
+  border: 2px solid #FF4D4D;
 
-  text-decoration:none;
+  color: #E6F1FF;
 
-  border-radius:14px;
+  border-radius: 14px;
 
-  font-weight:600;
+  text-decoration: none;
 
-  transition:0.3s ease;
+  font-weight: 600;
+
+  font-family: 'Outfit', sans-serif;
+
+  transition: 0.3s ease;
 }
 
-.secondary-btn:hover {
-  background: #00879E;
+.secondary-btn:hover{
+
+  background: #FF4D4D;
 }
 
 /* Right Side */
 
-.hero-image {
+.hero-image{
+
   flex: 1;
 
   display: flex;
@@ -151,30 +254,14 @@
 
 /* Image Container */
 
-.image-container {
+.image-container{
   position: relative;
-}
-
-/* Glow Effect */
-
-.glow {
-  position: absolute;
-
-  width: 320px;
-  height: 320px;
-
-  background: #00879E;
-
-  filter: blur(120px);
-
-  opacity: 0.4;
-
-  z-index: 1;
 }
 
 /* Image */
 
-.image-container img {
+.image-container img{
+
   width: 380px;
 
   position: relative;
@@ -186,17 +273,17 @@
 
 /* Floating Animation */
 
-@keyframes float {
+@keyframes float{
 
-  0% {
+  0%{
     transform: translateY(0px);
   }
 
-  50% {
+  50%{
     transform: translateY(-15px);
   }
 
-  100% {
+  100%{
     transform: translateY(0px);
   }
 
@@ -204,9 +291,10 @@
 
 /* Responsive */
 
-@media (max-width: 992px) {
+@media (max-width: 992px){
 
-  .hero {
+  .hero{
+
     flex-direction: column-reverse;
 
     text-align: center;
@@ -214,65 +302,61 @@
     padding-top: 140px;
   }
 
-  .hero-content {
+  .hero-content{
     margin-top: 50px;
   }
 
-  .hero-buttons {
+  .hero-buttons{
     justify-content: center;
   }
 
-  .hero-name {
+  .hero-name{
     font-size: 3.5rem;
   }
 
-  .hero-role {
-    font-size: 1.6rem;
-  }
-
-  .image-container img {
+  .image-container img{
     width: 300px;
   }
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px){
 
-  .hero-name {
+  .hero-name{
     font-size: 2.8rem;
   }
 
-  .hero-role {
-    font-size: 1.3rem;
-  }
-
-  .hero-description {
+  .hero-description{
     font-size: 0.95rem;
   }
 
-  .hero-buttons {
+  .hero-buttons{
     flex-direction: column;
   }
 
   .primary-btn,
-  .secondary-btn {
+  .secondary-btn{
     width: 100%;
   }
 
-  .image-container img {
+  .image-container img{
     width: 240px;
   }
 
 }
 
-@media (max-width:768px){
+@media (max-width: 768px){
 
   .hero-greeting{
-    font-size:2.8rem;
+    font-size: 1rem;
   }
 
   .typed-cursor{
-    font-size:2.8rem;
+    font-size: 1rem;
+  }
+
+  .hero-role{
+    font-size: 1rem;
   }
 
 }

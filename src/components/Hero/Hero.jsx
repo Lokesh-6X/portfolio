@@ -1,11 +1,14 @@
 // import React from "react";
 import "./Hero.css";
+import ParticlesBackground from "../ParticlesBackground/ParticlesBackground";
 
 import { ReactTyped } from "react-typed";
 
 const Hero = () => {
   return (
     <section className="hero" id="home">
+
+      <ParticlesBackground />
 
       {/* Left Content */}
 
