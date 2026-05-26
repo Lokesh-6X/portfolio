@@ -1,0 +1,278 @@
+.hero {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 120px 8% 60px;
+
+  background: #0F172A;
+
+  color: #FFF2DB;
+
+  overflow: hidden;
+}
+
+/* Left Content */
+
+.hero-content {
+  flex: 1;
+  max-width: 650px;
+}
+
+/* Greeting */
+
+.hero-greeting{
+  font-family:'Fira Code', monospace;
+
+  font-size:1.1rem;
+
+  font-weight:400;
+
+  color:#FFAB5B;
+
+  margin-bottom:16px;
+
+  letter-spacing:0.5px;
+}
+.typed-cursor{
+  font-size:1.1rem;
+
+  color:#FFAB5B;
+
+  font-weight:300;
+}
+
+/* Name */
+
+.hero-name {
+  font-size: 4.5rem;
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  margin-bottom: 20px;
+}
+
+/* Role */
+
+.hero-role{
+  font-family:'Outfit', sans-serif;
+
+  font-size:1.1rem;
+
+  font-weight:700;
+
+  color:#FFAB5B;
+
+  margin-bottom:20px;
+
+  text-transform:uppercase;
+
+  letter-spacing:1px;
+}
+
+/* Description */
+
+.hero-description{
+  font-size:1.05rem;
+  line-height:1.9;
+
+  color:rgba(255,242,219,0.75);
+
+  max-width:600px;
+
+  margin-bottom:40px;
+}
+
+/* Buttons */
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+/* Primary Button */
+
+.primary-btn{
+  padding:15px 34px;
+
+  background:#FFAB5B;
+
+  color:#0F172A;
+
+  text-decoration:none;
+
+  border-radius:14px;
+
+  font-weight:600;
+
+  transition:0.3s ease;
+
+  box-shadow:0 10px 30px rgba(255,171,91,0.25);
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px);
+}
+
+/* Secondary Button */
+
+.secondary-btn{
+  padding:15px 34px;
+
+  border:2px solid #00879E;
+
+  color:#FFF2DB;
+
+  text-decoration:none;
+
+  border-radius:14px;
+
+  font-weight:600;
+
+  transition:0.3s ease;
+}
+
+.secondary-btn:hover {
+  background: #00879E;
+}
+
+/* Right Side */
+
+.hero-image {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image Container */
+
+.image-container {
+  position: relative;
+}
+
+/* Glow Effect */
+
+.glow {
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  background: #00879E;
+
+  filter: blur(120px);
+
+  opacity: 0.4;
+
+  z-index: 1;
+}
+
+/* Image */
+
+.image-container img {
+  width: 380px;
+
+  position: relative;
+
+  z-index: 2;
+
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Floating Animation */
+
+@keyframes float {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+
+  .hero {
+    flex-direction: column-reverse;
+
+    text-align: center;
+
+    padding-top: 140px;
+  }
+
+  .hero-content {
+    margin-top: 50px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-name {
+    font-size: 3.5rem;
+  }
+
+  .hero-role {
+    font-size: 1.6rem;
+  }
+
+  .image-container img {
+    width: 300px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .hero-name {
+    font-size: 2.8rem;
+  }
+
+  .hero-role {
+    font-size: 1.3rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+
+  .image-container img {
+    width: 240px;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .hero-greeting{
+    font-size:2.8rem;
+  }
+
+  .typed-cursor{
+    font-size:2.8rem;
+  }
+
+}
