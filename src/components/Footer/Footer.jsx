@@ -23,7 +23,7 @@ const Footer = () => {
         {/* Name */}
 
         <h1 className="footer-logo">
-          LOKESH KUMAR
+          LOKESH KUMAR S
         </h1>
 
         {/* Tagline */}

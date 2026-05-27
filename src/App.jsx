@@ -6,8 +6,10 @@ import Skills from "./components/Skills/Skills";
 import ParticlesBackground from "./components/ParticlesBackground/ParticlesBackground";
 import Footer from "./components/Footer/Footer";
 import ContactModal from "./components/ContactModal/ContactModal";
+import Projects from "./components/Projects/Projects";
 
 import "./App.css";
+
 
 function App() {
 
@@ -24,6 +26,7 @@ function App() {
       <Navbar setIsContactOpen={setIsContactOpen} />
       <Hero setIsContactOpen={setIsContactOpen} />
       <Skills />
+      <Projects/>
       <Footer />
     </ div>
   );

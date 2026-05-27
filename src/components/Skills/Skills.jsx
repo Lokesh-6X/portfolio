@@ -77,14 +77,13 @@ const developer = {
 
           <div className="skill-card frontend">
 
-            <h2>⚡ FRONTEND</h2>
+            <h2>FRONTEND</h2>
 
             <div className="skill-tags">
               <span>HTML</span>
               <span>CSS</span>
               <span>JavaScript</span>
               <span>React</span>
-              <span>Handlebars</span>
             </div>
 
           </div>
@@ -93,12 +92,12 @@ const developer = {
 
           <div className="skill-card backend">
 
-            <h2>⚙ BACKEND</h2>
+            <h2>BACKEND</h2>
 
             <div className="skill-tags">
               <span>Python</span>
-              <span>Flask</span>
               <span>Java</span>
+              <span>Express JS</span>
               <span>REST APIs</span>
             </div>
 
@@ -108,10 +107,11 @@ const developer = {
 
           <div className="skill-card database">
 
-            <h2>💾 DATABASE</h2>
+            <h2>DATABASE</h2>
 
             <div className="skill-tags">
               <span>MySQL</span>
+              <span>MongoDB</span>
             </div>
 
           </div>
@@ -120,7 +120,7 @@ const developer = {
 
           <div className="skill-card tools">
 
-            <h2>🛠 TOOLS</h2>
+            <h2>TOOLS</h2>
 
             <div className="skill-tags">
               <span>Git</span>
