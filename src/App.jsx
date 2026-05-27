@@ -1,16 +1,28 @@
+import { useState } from "react";
+
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Skills from "./components/Skills/Skills";
 import ParticlesBackground from "./components/ParticlesBackground/ParticlesBackground";
 import Footer from "./components/Footer/Footer";
+import ContactModal from "./components/ContactModal/ContactModal";
+
 import "./App.css";
 
 function App() {
+
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
   return (
     <div className="app">
       <ParticlesBackground />
-      <Navbar />
-      <Hero />
+
+      <ContactModal 
+        isOpen={isContactOpen}
+  setIsOpen={setIsContactOpen} />
+
+      <Navbar setIsContactOpen={setIsContactOpen} />
+      <Hero setIsContactOpen={setIsContactOpen} />
       <Skills />
       <Footer />
     </ div>

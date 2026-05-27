@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700&display=swap');
+
+/* OVERLAY */
+
+.contact-overlay{
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background Blur */
+
+.contact-backdrop{
+
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(5,8,22,0.82);
+
+  backdrop-filter: blur(10px);
+}
+
+/* MODAL */
+
+.contact-modal{
+
+  position: relative;
+
+  width: 88%;
+
+  max-width: 1400px;
+
+  min-height: 80vh;
+
+  z-index: 2;
+
+  display: flex;
+
+  overflow: hidden;
+
+  border-radius: 30px;
+
+  isolation: isolate;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.06),
+      rgba(255,255,255,0.02)
+    );
+
+  border:
+    1px solid rgba(0,245,255,0.15);
+
+  backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 0 60px rgba(0,245,255,0.08);
+}
+
+/* CYBER LIGHTS */
+
+.contact-modal::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:400px;
+  height:400px;
+
+  top:-120px;
+  left:-120px;
+
+  background:#7B2FF7;
+
+  opacity:0.18;
+
+  filter:blur(140px);
+
+  z-index:0;
+}
+
+/* NOISE EFFECT */
+
+.contact-modal::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background-image:
+    url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+
+  opacity:0.05;
+
+  pointer-events:none;
+
+  z-index:1;
+}
+
+/* CLOSE BUTTON */
+
+.close-btn{
+
+  position: fixed;
+
+  top: 30px;
+  right: 30px;
+
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(10,14,30,0.88);
+
+  border: 1px solid rgba(0,245,255,0.18);
+
+  color: #E6F1FF;
+
+  font-size: 1.2rem;
+
+  cursor: pointer;
+
+  z-index: 999999;
+
+  transition: 0.3s ease;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 0 20px rgba(0,245,255,0.08);
+}
+
+/* CLOSE HOVER */
+
+.close-btn:hover{
+
+  transform: rotate(90deg);
+
+  color: #00F5FF;
+
+  border-color: rgba(0,245,255,0.45);
+
+  background: rgba(0,245,255,0.08);
+
+  box-shadow:
+    0 0 25px rgba(0,245,255,0.18);
+}
+
+/* LEFT SIDE */
+
+.contact-left{
+
+  flex:1;
+
+  position:relative;
+
+  z-index:2;
+
+  padding:100px 80px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+}
+
+/* MINI TEXT */
+
+.contact-mini{
+
+  font-family:'Fira Code', monospace;
+
+  color:#00F5FF;
+
+  letter-spacing:2px;
+
+  margin-bottom:25px;
+}
+
+/* TITLE */
+
+.contact-title{
+
+  font-family:'Oxanium', sans-serif;
+
+  font-size:7rem;
+
+  font-weight:700;
+
+  line-height:0.9;
+
+  letter-spacing:4px;
+
+  text-transform:uppercase;
+
+  color:#E6F1FF;
+
+  margin-bottom:35px;
+}
+
+/* SUBTITLE */
+
+.contact-subtitle{
+
+  font-family:'Space Grotesk', sans-serif;
+
+  font-size:1.05rem;
+
+  line-height:1.9;
+
+  color:rgba(230,241,255,0.72);
+
+  max-width:420px;
+}
+
+/* RIGHT SIDE */
+
+.contact-right{
+
+  flex:1;
+
+  position:relative;
+
+  z-index:2;
+
+  padding:100px 80px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  gap:24px;
+}
+
+/* CARDS */
+
+.contact-card{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:25px;
+
+  padding:26px;
+
+  text-decoration:none;
+
+  border-radius:22px;
+
+  background:rgba(255,255,255,0.04);
+
+  border:1px solid rgba(255,255,255,0.06);
+
+  transition:0.3s ease;
+}
+
+/* CARD HOVER */
+
+.contact-card:hover{
+
+  transform:translateY(-6px);
+
+  border-color:rgba(0,245,255,0.35);
+
+  background:rgba(0,245,255,0.05);
+}
+
+/* ICON */
+
+.contact-icon{
+
+  width:65px;
+  height:65px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:18px;
+
+  background:rgba(0,245,255,0.08);
+
+  color:#00F5FF;
+
+  font-size:1.4rem;
+}
+
+/* CARD TEXT */
+
+.contact-card h3{
+
+  font-family:'Oxanium', sans-serif;
+
+  font-size:1.2rem;
+
+  color:#E6F1FF;
+
+  margin-bottom:8px;
+}
+
+.contact-card p{
+
+  font-family:'Space Grotesk', sans-serif;
+
+  color:rgba(230,241,255,0.7);
+
+  font-size:0.95rem;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:1100px){
+
+  .contact-modal{
+
+    flex-direction:column;
+
+    overflow-y:auto;
+  }
+
+  .contact-left,
+  .contact-right{
+
+    padding:80px 40px;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .contact-title{
+
+    font-size:4rem;
+  }
+
+  .contact-card{
+
+    padding:20px;
+  }
+
+  .contact-icon{
+
+    width:55px;
+    height:55px;
+  }
+
+}
+
+@media (max-width:600px){
+
+  .contact-title{
+
+    font-size:3rem;
+
+    letter-spacing:2px;
+  }
+
+  .contact-left,
+  .contact-right{
+
+    padding:70px 25px;
+  }
+
+}

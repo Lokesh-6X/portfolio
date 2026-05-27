@@ -4,7 +4,7 @@ import ParticlesBackground from "../ParticlesBackground/ParticlesBackground";
 
 import { ReactTyped } from "react-typed";
 
-const Hero = () => {
+const Hero = ({ setIsContactOpen }) => {
   return (
     <section className="hero" id="home">
 
@@ -49,7 +49,7 @@ const Hero = () => {
             View Resume
           </a>
 
-          <a href="#contact" className="secondary-btn">
+          <a className="secondary-btn" onClick={() => setIsContactOpen(true)} style={{ cursor: "pointer" }}>
             Contact Me
           </a>
 
